@@ -1,15 +1,46 @@
 <script>
+import Heading from "./Heading.svelte";
+
+let count = $state(0)
+let emoji = $state("🙂")
+
+function changeCount() {
+    if (emoji === "🙂") {
+        count = count + 1
+    } else {
+        count = - 1
+    }
+}
+
+function changeEmoji() {
+    if (emoji === "🙂") {
+        emoji = "🙂"
+    } else {
+        emoji = "😢"
+    }
+}
 // Až vytvoříš komponent, nezapomeň jej importovat
-// Emoji se vytváří pomocí windows + . nebo je můžeš zkopírovat odsud 🙂 😢
+// Emoji se vytváří pomocí windows + . nebo je můžeš zkopírovat odsud 🙂 🙂
 </script>
 
 <div class="headings">
+<p>{count}</p>
+{#if }
+    <Heading text="Svelte"/>
+    <Heading text="je"/>
+    <Heading text="brnkačka"/>
+{/if}
     <!-- Sem patří komponenty s nadpisy -->
 </div>
 
 <div class="container">
-    <p>Zde se bude zobrazovat počet kliknutí</p> 
-    <div class="buttons">
+    <p>Zde se bude zobrazovat počet kliknutí {count}</p> 
+    <p><div class="buttons">
+    
+        <button onclick={changeCount}>+</button>
+
+        <button onclick={changeEmoji}>{emoji}</button>
+    </p>
         <!-- Sem patří tlačítka -->
     </div>
 </div>
