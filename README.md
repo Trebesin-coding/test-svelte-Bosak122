@@ -31,4 +31,11 @@ CSS není potřeba upravovat
 
 Nápověda pro syntax props: `let { ukazka } = $props()`
 
-### Počet bodu: ?/100
+### Počet bodu: 80/100
+
+- proč je component v routes
+- proč u props není rovnítko?
+- u html if chybí co podmiňujete
+- špatný syntax u posílání props
+- změna emoji je obráceně, měníte emoji na to, které již existuje
+
